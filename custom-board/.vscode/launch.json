@@ -1,0 +1,24 @@
+{
+	"version": "2.0.0",
+	"configurations": [
+	{
+		"name": "Flash & Debug App",
+		"cwd": "${workspaceFolder}",
+		"executable": "${workspaceFolder}/build/zephyr/zephyr.elf",
+		"request": "launch",
+		"type": "cortex-debug",
+		"servertype": "openocd",
+		//"gdbPath": "/opt/gcc-arm-none-eabi/bin/arm-none-eabi-gdb",
+		"interface": "swd",
+		"device": "STM32F446RE",
+		"targetId": "nucleo_f446re",
+		"boardId": "1",
+		// "gdb_port": "6000",
+		//"svdFile": "${workspaceFolder}/boards/arm/my_board/svd/STM32L4x2.svd",
+		"showDevDebugOutput": "none",
+		"configFiles": [
+			"/home/vscode/zephyrproject/zephyr/boards/arm/nucleo_f446re/support/openocd.cfg"
+		]
+	}
+	]
+}
