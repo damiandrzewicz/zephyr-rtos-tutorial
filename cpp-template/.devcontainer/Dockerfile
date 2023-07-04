@@ -32,6 +32,8 @@ ENV ZEPHYR_BASE="/home/vscode/zephyrproject/zephyr"
 # Grant user access to plugdev
 USER vscode
 RUN sudo usermod -aG plugdev $(whoami)
+# Grant user access to uucp group - to be compatible with arch-based distros
+RUN sudo usermod -aG uucp $(whoami)
 
 # Get Zephyr and install Python dependencies
 RUN pip3 install --user -U west \
